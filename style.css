@@ -1,0 +1,57 @@
+*{box-sizing: border-box;}
+
+
+
+body{
+    background-color: rgb(118, 74, 221);
+
+    font-family: "Lato", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.search{
+    position: relative;
+    height: 50px;
+}
+
+.input{
+    background-color:white;
+    border: 0;
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    height: 50px;
+    width: 50px;   /*to be used for collapse */
+    transition: width 0.3s ease;
+}
+
+.btn{
+    background-color: #fff;
+    position: absolute;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    outline: none;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.search.active .input{   
+    width: 200px;
+}
+
+.search.active .btn{
+    transform: translateX(198px);
+
+}
